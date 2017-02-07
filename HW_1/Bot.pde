@@ -1,30 +1,38 @@
 class Bot {
-  int x;
-  int y;
+  float x;
+  float y;
+  
+  int rr;
+  int gg;
+  int bb;
+  
+  float px;
+  float py;
 
-  int px;
-  int py;
+  Bot(float a,float b,int r_,int g_,int b_) {
+    
+    rr=r_;
+    bb=b_;
+    gg=g_;
+    
+    x = a;
+    y = b;
 
-  Bot() {
-    x = 100;
-    y = 100;
-   
     px = x;
     py = y;
-    
   }
   void display() {
-    stroke(0);
-    line(px, py, x, y);   
     
-    //point(x,y);
-    //bezier(px,py,10,10,-10,-10,x,y);   
+    stroke(rr,gg,bb);
+    
+    line(px, py, x, y);   
+
     px = x;
     py = y;
   }
 
   void step() {
-   
+
     int choice = int(random(4));
 
     if (choice == 0) {
