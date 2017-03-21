@@ -34,7 +34,7 @@ void draw() {
   //Dünya
   pushMatrix();
   stroke(136, 180, 220);
-  rotateY(frameCount * -PI/6 * 0.01);
+  rotateY(frameCount * PI/6 * 0.01);
   translate(220, 0, 0);
   fill(136, 180, 220);
   sphere(20);
